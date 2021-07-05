@@ -5,6 +5,7 @@ function getLocation () {
 function showCoordinat (position) {
   document.write('Широта :' + position.coords.latitude + '<br>')
   document.write('Долгота :' + position.coords.longitude + '<br>')
+  document.write('Точность :' + position.coords.accuracy)
 }
 
 function showError (error) {
