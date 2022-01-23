@@ -1,0 +1,17 @@
+
+
+.tab-title {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tab-title li{
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid blue;
+}
+.active {
+  font-weight: bold;
+  color: red;
+}
