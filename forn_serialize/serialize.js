@@ -2,7 +2,7 @@ function serialize(form) {
     if (!form || form.nodeName !== "FORM") {
         return false;
     }
-    var i, j, q = [];
+    let i, j, q = [];
     for (i = form.elements.length - 1; i >= 0; i = i - 1) {
         if (form.elements[i].name === "") {
             continue;
@@ -13,6 +13,13 @@ function serialize(form) {
                     case 'text':
                     case 'tel':
                     case 'email':
+                    case 'file':
+                    case 'image':
+                    case 'color':
+                    case 'date':
+                    case 'number':
+                    case 'range':
+                    case 'search':
                     case 'hidden':
                     case 'password':
                     case 'button':
