@@ -15,7 +15,7 @@ function showModal() {
     document.querySelector(modalId).classList.remove('hide');
     document.onkeydown = function (event) {
         if (event.keyCode == 27) closeModal();
-    }
+    };
 }
 
 function closeModal() {
