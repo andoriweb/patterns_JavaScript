@@ -14,7 +14,9 @@ function showModal() {
     let modalId = this.dataset.modal;
     document.querySelector(modalId).classList.remove('hide');
     document.onkeydown = function (event) {
-        if (event.keyCode == 27) closeModal();
+        if (event.keyCode == 27) {
+            closeModal();
+        }
     };
 }
 
@@ -25,3 +27,6 @@ function closeModal() {
     document.onkeydown = null;
 }
 
+document.querySelector('#sign-in .modal').onclick = function(event) {
+    event.stopPropagation();
+};
