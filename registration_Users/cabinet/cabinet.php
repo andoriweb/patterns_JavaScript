@@ -18,7 +18,10 @@
 <body>
     <h1>User Page</h1>
     <button id="logout">LogOUT</button>
-    <script src="script/logout.js"></script>
+
+
+    
+    <script src="./logout.js"></script>
 </body>
 
 </html>
