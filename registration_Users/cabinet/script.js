@@ -69,6 +69,16 @@ document.querySelector('#login-submit').onclick = function(event) {
     }
     else {
       console.log(result);
+      // Распарсить возвращаемую строку
+      result = JSON.parse(result);
+      // Устанавливаем cookie и настраиваем время
+      var d = new Date();
+      // d.setTime(d.getTime() + (exdays*24*60*60*1000)); // 24 h
+      d.setTime(d.getTime() + (60 * 1000)); // 1min
+      var expires = d.toUTCString();
+      document.cookie = `email=${result.email}; expires=${expires}; path=/`;
+      // Перенаправляем в кабинет
+      location.href = "cabinet.php";
     }
   }
 };
